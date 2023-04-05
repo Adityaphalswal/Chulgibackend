@@ -31,7 +31,7 @@ if (process.env.NODE_ENV === "production") {
   console.log("backend is in production mode");
 
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve("https://chugli.netlify.app/"));
+    res.sendFile("https://chugli.netlify.app/");
   });
 } else {
   app.get("/", (req, res) => {
