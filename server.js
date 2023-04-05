@@ -27,7 +27,7 @@ app.use("/api/message", messageRoutes);
 const __dirname1 = path.resolve();
 if (process.env.NODE_ENV === "production") {
 //   app.use(express.static(path.join(__dirname1, "/frontend/build")));
-  app.use(express.static(path.join(__dirname1, "https://chugli.netlify.app")));
+  app.use(express.static( "https://chugli.netlify.app"));
   console.log("backend is in production mode");
 
   app.get("*", (req, res) => {
@@ -50,7 +50,7 @@ const server = app.listen(
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "https://642cf90d21493d47f290989d--remarkable-chaja-0cb34b.netlify.app/",
+    origin: "chugli.netlify.app/",
   },
 });
 
